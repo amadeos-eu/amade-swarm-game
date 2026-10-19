@@ -1,0 +1,24 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=amadeOS Swarm
+Name[de]=amadeOS Swarm
+Name[fr]=amadeOS Swarm
+Name[es]=amadeOS Swarm
+Name[it]=amadeOS Swarm
+GenericName=Space Shooting Game
+GenericName[de]=Weltraum-Schießspiel
+GenericName[fr]=Jeu de tir spatial
+GenericName[es]=Juego de disparos espacial
+GenericName[it]=Gioco di tiro spaziale
+Comment=Shoot the swarm of insects before it dives at your fighter
+Comment[de]=Schießen Sie den Insektenschwarm ab, bevor er auf Ihren Jäger herabstößt
+Comment[fr]=Abattez l'essaim d'insectes avant qu'il ne fonde sur votre chasseur
+Comment[es]=Derribe el enjambre de insectos antes de que se lance sobre su caza
+Comment[it]=Abbatti lo sciame di insetti prima che si lanci sul tuo caccia
+Icon=amade-swarm-game
+Exec=/usr/bin/amade-swarm-game
+Terminal=false
+Categories=Game;ArcadeGame;
+Keywords=galaga;galaxian;swarm;insects;space;shooter;arcade;game;
+StartupNotify=true

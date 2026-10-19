@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
 import java.util.HashMap;
 import java.util.Map;
@@ -66,8 +67,11 @@ final class Hud {
 
     /** Darkens the field so text over it stays readable. */
     void veil(Graphics2D g) {
+        Object smoothing = g.getRenderingHint(RenderingHints.KEY_ANTIALIASING);
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
         g.setColor(VEIL);
         g.fill(veil);
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, smoothing);
     }
 
     /** A line of text centred horizontally, its baseline at {@code y}. */

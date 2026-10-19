@@ -14,6 +14,7 @@ import eu.amadeos.games.swarm.domain.Shot;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 
@@ -52,9 +53,13 @@ final class SwarmPainter {
     // --8<-- [start:paint]
     /** @param alpha how far the time is between the last two update steps, 0 to 1 */
     void paint(Graphics2D g, Game game, Effects effects, double alpha) {
+        // Space and stars are straight-edged rectangles: without antialiasing, which would cost three times as much.
+        Object smoothing = g.getRenderingHint(RenderingHints.KEY_ANTIALIASING);
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
         g.setColor(Color.BLACK);
         g.fill(space);
         stars(g, effects, alpha);
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, smoothing);
         this.g = g;
         this.alpha = alpha;
         this.wingRow = wings.frame(effects.time());

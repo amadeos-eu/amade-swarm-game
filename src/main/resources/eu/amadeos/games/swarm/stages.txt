@@ -1,0 +1,76 @@
+# The stages of Swarm. Lines are words separated by spaces; "#" starts a comment.
+#
+# A path is a curve in the field's coordinates (640 × 400, y downwards):
+#   path <name>
+#   from <x> <y>                                          where it starts
+#   curve <c1x> <c1y> <c2x> <c2y> <x> <y>                 a Bézier curve to x, y, bent by two control points
+#   line <x> <y>                                          a straight line
+#   mirror <name> <other path>                            the other path, mirrored left to right
+#
+# A stage is a list of groups. A group flies in along one path, one insect after the other:
+#   stage [challenge]
+#   group <seconds into the stage> <path> <insect> <insect> ...
+# An insect is bee, butterfly or boss, with its slot in the formation: bee@4,3 is column 4 (0 to 9 from the
+# left), row 3 (0 to 4 from the top). An insect without a slot flies through and leaves; a challenge stage
+# has only such insects, and a bonus for hitting all of them.
+#
+# After the last stage, the first comes again, a little faster each time.
+
+# From the top: down and out to the side, round a loop at the bottom, and up to the formation.
+path top-left
+from 290 -16
+curve 290 120  120 170  110 250
+curve 100 330  250 340  260 260
+curve 268 200  230 170  200 150
+mirror top-right top-left
+
+# From the lower side: in low over the fighter, up and round a loop below the formation.
+path side-left
+from -16 330
+curve 120 330  250 300  280 220
+curve 300 160  260 100  200 110
+curve 150 118  140 170  180 190
+mirror side-right side-left
+
+# Challenge paths: through the field and out again.
+path swirl-left
+from 200 -16
+curve 200 200  60 300  140 330
+curve 220 360  330 260  300 180
+curve 270 100  420 60  660 120
+mirror swirl-right swirl-left
+
+path cross-left
+from -16 120
+curve 200 120  440 300  320 340
+curve 200 380  160 250  320 200
+curve 480 150  560 40  660 -20
+mirror cross-right cross-left
+
+# Stage 1, 4, 7, ...
+stage
+group 0    top-left   butterfly@4,1 butterfly@5,1 butterfly@4,2 butterfly@5,2
+group 0    top-right  bee@4,3 bee@5,3 bee@4,4 bee@5,4
+group 3.5  side-left  boss@3,0 butterfly@3,1 boss@4,0 butterfly@6,1 boss@5,0 butterfly@3,2 boss@6,0 butterfly@6,2
+group 7    side-right butterfly@1,1 butterfly@2,1 butterfly@7,1 butterfly@8,1 butterfly@1,2 butterfly@2,2 butterfly@7,2 butterfly@8,2
+group 10.5 top-right  bee@2,3 bee@3,3 bee@6,3 bee@7,3 bee@2,4 bee@3,4 bee@6,4 bee@7,4
+group 14   top-left   bee@0,3 bee@1,3 bee@8,3 bee@9,3 bee@0,4 bee@1,4 bee@8,4 bee@9,4
+
+# Stage 2, 5, 8, ...: the same formation, from the other sides.
+stage
+group 0    side-left  bee@4,3 bee@5,3 bee@4,4 bee@5,4
+group 0    side-right butterfly@4,1 butterfly@5,1 butterfly@4,2 butterfly@5,2
+group 3.5  top-left   boss@3,0 butterfly@3,1 boss@4,0 butterfly@6,1 boss@5,0 butterfly@3,2 boss@6,0 butterfly@6,2
+group 7    top-right  butterfly@1,1 butterfly@2,1 butterfly@7,1 butterfly@8,1 butterfly@1,2 butterfly@2,2 butterfly@7,2 butterfly@8,2
+group 10.5 side-left  bee@2,3 bee@3,3 bee@6,3 bee@7,3 bee@2,4 bee@3,4 bee@6,4 bee@7,4
+group 14   side-right bee@0,3 bee@1,3 bee@8,3 bee@9,3 bee@0,4 bee@1,4 bee@8,4 bee@9,4
+
+# Stage 3, 6, 9, ...: a challenge. Nobody shoots, nobody stays.
+stage challenge
+group 0    swirl-left  bee bee bee bee
+group 0    swirl-right bee bee bee bee
+group 4    cross-left  butterfly butterfly butterfly butterfly butterfly butterfly butterfly butterfly
+group 8    cross-right butterfly butterfly butterfly butterfly butterfly butterfly butterfly butterfly
+group 12   swirl-left  boss butterfly boss butterfly
+group 12   swirl-right boss butterfly boss butterfly
+group 16   cross-left  bee bee bee bee bee bee bee bee

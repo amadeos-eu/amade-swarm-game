@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AppStream metadata of amade-swarm-game, installed as /usr/share/metainfo/eu.amadeos.games.swarm.metainfo.xml.
+     amadeOS Software shows it for the installed package; a repository's appstream-generator reads it too. -->
+<component type="desktop-application">
+  <id>eu.amadeos.games.swarm</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>EUPL-1.2</project_license>
+
+  <name>amadeOS Swarm</name>
+
+  <summary>Shoot the swarm of insects before it dives at your fighter</summary>
+  <summary xml:lang="de">Den Insektenschwarm abschießen, bevor er auf Ihren Jäger herabstößt</summary>
+  <summary xml:lang="fr">Abattez l'essaim d'insectes avant qu'il ne plonge sur votre chasseur</summary>
+  <summary xml:lang="es">Derribe el enjambre de insectos antes de que se lance sobre su caza</summary>
+  <summary xml:lang="it">Abbatti lo sciame di insetti prima che si lanci sul tuo caccia</summary>
+
+  <description>
+    <p>The classic swarm from space: insects swoop in along curving paths, take their places in a formation and dive at your fighter at the bottom of the screen.</p>
+    <p xml:lang="de">Der klassische Schwarm aus dem All: Insekten fliegen auf geschwungenen Bahnen herein, nehmen ihre Plätze in einer Formation ein und stoßen auf Ihren Jäger am unteren Bildschirmrand herab.</p>
+    <p xml:lang="fr">L'essaim de l'espace classique : des insectes arrivent en courbes, prennent leur place dans une formation et plongent sur votre chasseur en bas de l'écran.</p>
+    <p xml:lang="es">El clásico enjambre del espacio: los insectos llegan en trayectorias curvas, ocupan su lugar en una formación y se lanzan sobre su caza en la parte inferior de la pantalla.</p>
+    <p xml:lang="it">Il classico sciame dallo spazio: gli insetti arrivano lungo traiettorie curve, prendono posto in una formazione e si lanciano sul tuo caccia in fondo allo schermo.</p>
+    <ul>
+      <li>Stages that grow harder</li>
+      <li xml:lang="de">Stufen, die immer schwerer werden</li>
+      <li xml:lang="fr">Des étapes de plus en plus difficiles</li>
+      <li xml:lang="es">Fases cada vez más difíciles</li>
+      <li xml:lang="it">Fasi sempre più difficili</li>
+      <li>Ten best scores; on the title screen the computer plays</li>
+      <li xml:lang="de">Zehn Bestwerte; auf dem Titelbildschirm spielt der Computer</li>
+      <li xml:lang="fr">Dix meilleurs scores ; sur l'écran titre, l'ordinateur joue</li>
+      <li xml:lang="es">Diez mejores puntuaciones; en la pantalla de título juega el ordenador</li>
+      <li xml:lang="it">Dieci punteggi migliori; nella schermata del titolo gioca il computer</li>
+      <li>Full screen with F11</li>
+      <li xml:lang="de">Vollbild mit F11</li>
+      <li xml:lang="fr">Plein écran avec F11</li>
+      <li xml:lang="es">Pantalla completa con F11</li>
+      <li xml:lang="it">Schermo intero con F11</li>
+      <li>Built on amade-game-engine; plays on other operating systems as well</li>
+      <li xml:lang="de">Gebaut auf amade-game-engine; läuft auch auf anderen Betriebssystemen</li>
+      <li xml:lang="fr">Construit sur amade-game-engine ; fonctionne aussi sur d'autres systèmes d'exploitation</li>
+      <li xml:lang="es">Hecho con amade-game-engine; funciona también en otros sistemas operativos</li>
+      <li xml:lang="it">Costruito su amade-game-engine; funziona anche su altri sistemi operativi</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">amade-swarm-game.desktop</launchable>
+  <icon type="stock">amade-swarm-game</icon>
+  <categories>
+    <category>Game</category>
+    <category>ArcadeGame</category>
+  </categories>
+
+  <url type="homepage">https://github.com/datazuul/amade-swarm-game</url>
+  <url type="bugtracker">https://github.com/datazuul/amade-swarm-game/issues</url>
+  <developer id="eu.amadeos">
+    <name>amadeOS Project</name>
+  </developer>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>The swarm in formation</caption>
+      <caption xml:lang="de">Der Schwarm in Formation</caption>
+      <caption xml:lang="fr">L'essaim en formation</caption>
+      <caption xml:lang="es">El enjambre en formación</caption>
+      <caption xml:lang="it">Lo sciame in formazione</caption>
+      <image>https://raw.githubusercontent.com/datazuul/amade-swarm-game/main/docs/screenshots/amade-swarm-game.png</image>
+    </screenshot>
+  </screenshots>
+
+  <provides>
+    <binary>amade-swarm-game</binary>
+  </provides>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-fantasy">mild</content_attribute>
+  </content_rating>
+</component>

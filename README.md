@@ -1,6 +1,6 @@
 # amade-swarm-game
 
-**amade-swarm-game** is the classic swarm from space on the [amadeOS](https://github.com/datazuul/amadeos) desktop: insects swoop in along curving paths, take their places in a formation and dive at your fighter at the bottom of the screen. Built on [amade-game-engine](https://github.com/datazuul/amade-game-engine); runs on other operating systems as well.
+**amade-swarm-game** is the classic swarm from space on the [amadeOS](https://github.com/amadeos-eu/amadeos) desktop: insects swoop in along curving paths, take their places in a formation and dive at your fighter at the bottom of the screen. Built on [amade-game-engine](https://github.com/amadeos-eu/amade-game-engine); runs on other operating systems as well.
 
 ![License](https://img.shields.io/badge/license-EUPL--1.2-blue)
 ![Java](https://img.shields.io/badge/Java-25-orange)

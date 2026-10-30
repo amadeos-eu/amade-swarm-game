@@ -51,8 +51,8 @@
     <category>ArcadeGame</category>
   </categories>
 
-  <url type="homepage">https://github.com/datazuul/amade-swarm-game</url>
-  <url type="bugtracker">https://github.com/datazuul/amade-swarm-game/issues</url>
+  <url type="homepage">https://github.com/amadeos-eu/amade-swarm-game</url>
+  <url type="bugtracker">https://github.com/amadeos-eu/amade-swarm-game/issues</url>
   <developer id="eu.amadeos">
     <name>amadeOS Project</name>
   </developer>
@@ -64,7 +64,7 @@
       <caption xml:lang="fr">L'essaim en formation</caption>
       <caption xml:lang="es">El enjambre en formación</caption>
       <caption xml:lang="it">Lo sciame in formazione</caption>
-      <image>https://raw.githubusercontent.com/datazuul/amade-swarm-game/main/docs/screenshots/amade-swarm-game.png</image>
+      <image>https://raw.githubusercontent.com/amadeos-eu/amade-swarm-game/main/docs/screenshots/amade-swarm-game.png</image>
     </screenshot>
   </screenshots>
 

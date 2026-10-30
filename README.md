@@ -60,7 +60,7 @@ With `../amade-game-engine` (and `../amade-commons`) checked out next to this re
 
 From the engine: `GameLoop`, `Entities` and `Entity`, `FlightPath`, `TextData`, `Grid`, `SpriteSheet` and `Animation`, `Vector` and `Angles`, `Pool`, `Circle`, `SeededRandom`, `GameCanvas`, `Particles`, `Sound`, `Tune` and `Mixer`, `Keyboard`, `Mouse` and `Controls`, `SceneStack`, `FullScreen`, high scores.
 
-Comments of the form `// --8<-- [start:name]` mark the excerpts the [Game Developer's Handbook](https://datazuul.github.io/amade-game-engine/) quotes; chapter 24 is about this game.
+Comments of the form `// --8<-- [start:name]` mark the excerpts the [Game Developer's Handbook](https://docs.amadeos.eu/amade-game-engine/) quotes; chapter 24 is about this game.
 
 ## Licence
 

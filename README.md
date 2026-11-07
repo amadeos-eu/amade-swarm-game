@@ -5,6 +5,8 @@
 ![License](https://img.shields.io/badge/license-EUPL--1.2-blue)
 ![Java](https://img.shields.io/badge/Java-25-orange)
 
+![Swarm](docs/screenshots/amade-swarm-game.png)
+
 ## Playing
 
 - **Enter**, **Space** or a **click** (or F2) starts a game.
